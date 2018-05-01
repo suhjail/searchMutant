@@ -1,0 +1,30 @@
+{"databaseChangeLog": [{
+    "changeSet": {
+        "id": "201704271032",
+        "author": "Suhjail Caldera",
+        "preConditions": [{ 
+            "onFail": "WARN",
+            "onFailMessage": "La tabla ya existe",
+            "not": {
+                "tableExists": {
+                    "tableName": "Mutant"
+                }
+            }
+        }],
+        "changes": [{
+            "createTable": {"tableName": "Mutant",
+                "columns": [ 
+                    {"column": {"name": "id", "type": "int", "autoIncrement": true, "constraints": {"primaryKey": true, "nullable": false}}},
+                    {"column": {"name": "adn", "type": "array", "constraints": {"nullable": false}}},
+                    {"column": {"name": "isMutant", "type": "bit", "constraints": {"nullable": false}}}
+                ]}
+            }
+        ],
+        "rollback": [
+          {
+            "delete": {
+              "tableName": "Mutant"
+            }
+          }
+        ]
+    }}]}

@@ -1,0 +1,4 @@
+{"databaseChangeLog": [
+    {"comment": "Creacion de tabla para estadistica"},
+    {"include": {"file": "changelog/create-Mutant.json", "relativeToChangelogFile": true}}
+]}
