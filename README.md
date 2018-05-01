@@ -15,7 +15,7 @@ El MS para la búsqueda de mutantes surge por petición de Magneto el cual quier
 ## Validaciones a tomar en cuenta
 
 - Para ejecutar el servicio de búsqueda de mutantes en tu computadora local llamar a POST "ip:port/mutant/" (Debe haber bajado el código y seguir las instrucciones de instalación)
-- Para ejecutar el servicio que se encuentra subido en la nube llamar a GET "https://searchmutant.appspot.com/mutant/"
+- Para ejecutar el servicio que se encuentra subido en la nube llamar a POST "https://searchmutant.appspot.com/mutant/"
 - Para la llamada se deberá enviar un json con el siguiente formato:
 	{ "dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"] } 
 - Se guardara en la base de datos solo los ADN que cumplan con un request válido:
